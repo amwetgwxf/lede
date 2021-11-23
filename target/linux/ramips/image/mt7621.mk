@@ -856,6 +856,18 @@ define Device/jcg_y2
 endef
 TARGET_DEVICES += jcg_y2
 
+define Device/WITOWN-V3PRO
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 15744k
+  DEVICE_VENDOR := WITOWN
+  DEVICE_MODEL := V3PRO
+  DEVICE_PACKAGES := kmod-usb3 kmod-sdhci-mt7620 \
+	kmod-usb-ledtrig-usbport
+  SUPPORTED_DEVICES += mt7621
+endef
+TARGET_DEVICES += WITOWN-V3PRO
+
 define Device/lenovo_newifi-d1
   $(Device/dsa-migration)
   $(Device/uimage-lzma-loader)
