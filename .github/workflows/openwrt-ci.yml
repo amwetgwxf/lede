@@ -9,7 +9,7 @@ name: OpenWrt-CI
 
 on:
   schedule:
-    - cron: 0 2 * * *
+    - cron: 0 4 * * *
   release:
     types: [published]
 
@@ -59,7 +59,7 @@ jobs:
           # ========================固件定制部分========================
           CONFIG_TARGET_ramips=y
           CONFIG_TARGET_ramips_mt7621=y
-          CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_mi-router-3g=y
+          CONFIG_TARGET_ramips_mt7621_DEVICE_WITOWN-V3PRO=y
           CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
           CONFIG_PACKAGE_iptables-mod-ipopt=y
           CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
@@ -71,15 +71,11 @@ jobs:
           CONFIG_PACKAGE_libzstd=y
           CONFIG_PACKAGE_luci-app-mwan3=y
           CONFIG_PACKAGE_luci-app-mwan3helper=y
-          CONFIG_PACKAGE_luci-app-n2n_v2=y
           CONFIG_PACKAGE_luci-app-ttyd=y
           CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-mwan3helper-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-n2n_v2-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
           CONFIG_PACKAGE_mwan3=y
-          CONFIG_PACKAGE_n2n-edge=y
-          CONFIG_PACKAGE_n2n-supernode=y
           CONFIG_PACKAGE_resolveip=y
           CONFIG_PACKAGE_ttyd=y
           CONFIG_ZSTD_OPTIMIZE_O3=y
