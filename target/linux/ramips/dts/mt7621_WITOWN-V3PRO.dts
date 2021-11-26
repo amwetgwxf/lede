@@ -34,7 +34,7 @@
 
 		led_blue: status-blue {
 			label = "blue:status";
-			gpios = <&gpio 16 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 8 GPIO_ACTIVE_LOW>;
 			default-state = "on";
 		};
 	};
